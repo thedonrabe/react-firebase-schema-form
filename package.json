@@ -1,6 +1,6 @@
 {
   "name": "react-firebase-schema-form",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description":
     "A tool to create a simple form (that can be styled) to allow for schema object basic validation and data entry into a Firebase database (with auth user creation optional)",
   "main": "react-firebase-schema-form.js",

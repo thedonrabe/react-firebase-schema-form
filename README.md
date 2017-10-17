@@ -53,7 +53,7 @@ export const exampleUser = {
 * '_i' will ignore this field in the form, but still allow for information to be included in the database push
 * '_r' will require this field to be entered when filling out the form. 
 
-  * The current method of this tool requires that the '_r' be the last validation item in a chain, but you can chain them along for example look at the email property in the schema object.
+  *The current method of this tool requires that the '_r' be the last validation item in a chain, but you can chain them along for example look at the email property in the schema object.
 
 ```javascript
 email_e_r: "",
@@ -61,7 +61,7 @@ email_e_r: "",
 
 this will both verify it is an email as well as require the field to be entered.
 
-### Next, we can now use the tool
+### Next, we can now use the tool:
 
 We can call our component using the tag
 
@@ -89,12 +89,12 @@ the modal shut function is not required to be passed in, but we use this client 
 
 I have included className tags in the JSX elements for styling purposes if you would like to style the form.
 
-*dbtool-unorderedList - the unordered list.
-*dbtool-nestedHeader - any nested object headers -- in the example 'bio' would use this className.
-*dbtool-listItemWithInput - the list item, or label for input fields
-*dbtool-input - input fields for data entry
-*dbtool-footer - any footer styling for the section containing the submit button
-*dbtool-button - submit button styling
+* dbtool-unorderedList - the unordered list.
+* dbtool-nestedHeader - any nested object headers -- in the example 'bio' would use this className.
+* dbtool-listItemWithInput - the list item, or label for input fields
+* dbtool-input - input fields for data entry
+* dbtool-footer - any footer styling for the section containing the submit button
+* dbtool-button - submit button styling
 
 #### Firebase initialization code
 
