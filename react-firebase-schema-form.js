@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-export default class DBTool extends Component {
+export default class DBFormTool extends Component {
   constructor(props) {
     super(props);
 
@@ -138,14 +138,7 @@ export default class DBTool extends Component {
         .auth()
         .createUserWithEmailAndPassword(tempObj.email, tempObj.password)
         .then(response => {
-          // set display name in auth user to use for initial data fetch
-          response
-            .updateProfile({
-              displayName: this.props.branch.slice(6, this.props.branch.length)
-            })
-            .then(payload => {
-              // handle payload if needed
-            });
+          // if you would like to do something with the user object returned
         });
     }
 
@@ -413,5 +406,5 @@ DBTool.PropTypes = {
   branch: PropTypes.string.isRequired,
   inSchema: PropTypes.object.isRequired,
   createUser: PropTypes.bool,
-  modalShutFunct: PropTypes.func.isRequired
+  modalShutFunct: PropTypes.func
 };
