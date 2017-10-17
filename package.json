@@ -1,26 +1,32 @@
 {
   "name": "react-firebase-schema-form",
-  "version": "1.0.2",
+  "version": "1.0.7",
   "description":
     "A tool to create a simple form (that can be styled) to allow for schema object basic validation and data entry into a Firebase database (with auth user creation optional)",
-  "main": "react-firebase-schema-form.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "cross-env NODE_ENV=development webpack -w",
+    "build:dev": "cross-env NODE_ENV=development webpack",
+    "build:production": "cross-env NODE_ENV=production webpack -p"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/thedonrabe/react-firebase-schema-form.git"
-  },
-  "keywords": ["firebase", "schema", "react", "form", "database", "auth"],
-  "author":
-    "thedonrabe <brandon.rabe1@gmail.com> (https://github.com/thedonrabe)",
+  "repository": "https://github.com/thedonrabe/react-firebase-schema-form.git",
+  "author": "Brandon Rabe <bdrabe@cox.net>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/thedonrabe/react-firebase-schema-form/issues"
+  "keywords": ["firebase", "schema", "react", "form", "database", "auth"],
+  "peerDependency": {
+    "prop-types": "^15.6.0",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
   },
-  "homepage": "https://github.com/thedonrabe/react-firebase-schema-form#readme",
-  "dependencies": {
-    "prop-types": "^15.5.10",
-    "react": "^15.6.1"
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "cross-env": "^5.1.0",
+    "webpack": "^3.7.1",
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
   }
 }

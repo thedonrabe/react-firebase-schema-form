@@ -144,10 +144,8 @@ export default class DBFormTool extends Component {
 
     // clear out password data and set time stamp for the full db push
     this.setState({
-      ...this.state,
       password: "",
-      createdAt: Date(),
-      ...this.state
+      createdAt: Date()
     });
 
     // delete password information from temp object so it doesn't get passed to
@@ -165,7 +163,6 @@ export default class DBFormTool extends Component {
       .then(payload => {
         // set the key value to the return
         this.setState({
-          ...this.state,
           key: payload.key
         });
 
