@@ -399,7 +399,7 @@ export default class DBFormTool extends Component {
 }
 
 // prop-type definition
-DBTool.PropTypes = {
+DBFormTool.PropTypes = {
   branch: PropTypes.string.isRequired,
   inSchema: PropTypes.object.isRequired,
   createUser: PropTypes.bool,
