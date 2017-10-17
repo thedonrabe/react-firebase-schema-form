@@ -5,7 +5,9 @@
     "A tool to create a simple form (that can be styled) to allow for schema object basic validation and data entry into a Firebase database (with auth user creation optional)",
   "main": "react-firebase-schema-form.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --watch",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -21,6 +23,15 @@
   "homepage": "https://github.com/thedonrabe/react-firebase-schema-form#readme",
   "dependencies": {
     "prop-types": "^15.5.10",
-    "react": "^15.6.1"
+    "react": "^15.6.1",
+    "webpack": "^2.6.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.5.1"
   }
 }
