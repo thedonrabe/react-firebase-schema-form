@@ -66,7 +66,6 @@ export default class DBFormTool extends Component {
 
   // given array from object build db form for input
   formBuilder(inArr) {
-    console.log(inArr);
     return (
       <ul className="dbtool-unorderedList">
         {inArr.map(item => {

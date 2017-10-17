@@ -11,7 +11,7 @@ const WebpackConfig = {
     path: BUILD_DIR,
     filename: "index.js",
     libraryTarget: "umd",
-    library: "CodeHighlight"
+    library: "DBFormTool"
   },
 
   module: {

@@ -19,7 +19,7 @@ Note: You will need the [firebase npm package](https://www.npmjs.com/package/fir
 
 ES6 -
 ```javascript
-import {DBFormTool} from 'react-firebase-schema-form';
+import DBFormTool from 'react-firebase-schema-form';
 ```
 
 ### To use form first create a schema to use:
