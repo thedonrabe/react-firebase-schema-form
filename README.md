@@ -82,7 +82,7 @@ the modal shut function is not required to be passed in, but we use this client 
 * createUser - a bool passed in to let the tool know if you want an authentication user created along with the push to the database. This will only create an authentication user by email and password.
 * modalShutFunct - function to shut the modal or other display showing form.
 * title - the title for the form to show
-* firebaseObj - this is a authorized firebase object... You must have the firebase npm package installed and authorized, then pass that authorized object into the tool for the database pushes. For further information on this please see the [firebase npm package](https://www.npmjs.com/package/firebase)
+Note: firebase initialization required - You must have the firebase npm package installed and authorized. For further information on this please see the [firebase npm package](https://www.npmjs.com/package/firebase)
 
 ## Styling
 
