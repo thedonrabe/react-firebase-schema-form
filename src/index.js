@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import * as firebase from "firebase";
 
 export default class DBFormTool extends Component {
   constructor(props) {
@@ -133,7 +134,7 @@ export default class DBFormTool extends Component {
       tempObj.email = tempObj.email.toLowerCase();
 
       // create Auth user
-      this.props.firebaseObj
+      firebase
         .auth()
         .createUserWithEmailAndPassword(tempObj.email, tempObj.password)
         .then(response => {
@@ -155,7 +156,7 @@ export default class DBFormTool extends Component {
     tempObj.createdAt = Date();
 
     // push temp object to db
-    this.props.firebaseObj
+    firebase
       .database()
       .ref(`/${this.props.branch}/`)
       .push(tempObj)
@@ -168,27 +169,27 @@ export default class DBFormTool extends Component {
         // if this is a user
         if (this.props.createUser) {
           // create in the passed in branch
-          this.props.firebaseObj
+          firebase
             .database()
             .ref(`/${this.props.branch}/${payload.key}/userRights_key`)
             .once("value")
             .then(snapshot => {
               // attach user rights
-              this.props.firebaseObj
+              firebase
                 .database()
                 .ref(`/userRights/${snapshot.val()}`)
                 .once("value")
                 .then(snapshot => {
                   // if teacher put reference in active teachers branch
                   if (snapshot.val().name === "teacher") {
-                    this.props.firebaseObj
+                    firebase
                       .database()
                       .ref(`/activeTeachers/${this.state.key}`)
                       .set("keyRef");
                   }
                   // if parent put reference in active parents branch
                   if (snapshot.val().name === "parent") {
-                    this.props.firebaseObj
+                    firebase
                       .database()
                       .ref(`/activeParents/${this.state.key}`)
                       .set("keyRef");
@@ -197,7 +198,7 @@ export default class DBFormTool extends Component {
             });
         } else {
           // create the item in the db
-          this.props.firebaseObj
+          firebase
             .database()
             .ref(`/${this.props.branch}/`)
             .push(tempObj)

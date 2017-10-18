@@ -13,7 +13,7 @@ Install react-firebase-schema-form npm module:
 ```
 $ npm install --save react-firebase-schema-form
 ```
-Note: You will need the [firebase npm package](https://www.npmjs.com/package/firebase) installed to send an authorized firebase object to the tool. Code found for initializing firebase at bottom of this page
+Note: You will need the [firebase npm package](https://www.npmjs.com/package/firebase) installed and intialize in your app for the DBFormTool to use. Code example for initializing firebase at bottom of this page.
 
 ## To use in your code:
 
@@ -72,7 +72,6 @@ We can call our component using the tag
      createUser= true
      modalShutFunct={() => this.toggleModal()}
      title="Enter User Information"
-     firebaseObj=firebase
 />
 ```
 
@@ -101,7 +100,7 @@ I have included className tags in the JSX elements for styling purposes if you w
 ```javascript
 var config = {...};
 
-// firebase authorized object
+// firebase initialization
 const firebaseObj = firebase.initializeApp(config);
 ```
 

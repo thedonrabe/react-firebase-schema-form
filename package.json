@@ -13,10 +13,17 @@
   "author": "Brandon Rabe <bdrabe@cox.net>",
   "license": "MIT",
   "keywords": ["firebase", "schema", "react", "form", "database", "auth"],
+  "dependencies": {
+    "prop-types": "^15.6.0",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "firebase": "^4.5.2"
+  },
   "peerDependency": {
     "prop-types": "^15.6.0",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "firebase": "^4.5.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -24,9 +31,10 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "cross-env": "^5.1.0",
-    "webpack": "^3.7.1",
+    "firebase": "^4.5.2",
     "prop-types": "^15.6.0",
     "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "react-dom": "^16.0.0",
+    "webpack": "^3.7.1"
   }
 }
